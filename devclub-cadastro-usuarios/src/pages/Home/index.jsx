@@ -1,7 +1,7 @@
 import "./style.css";
 import { ArchiveX } from "lucide-react";
 import api from "../../services/api";
-import { useEffect, useState } from "react";
+import { useEffect, useState,  } from "react";
 
 function Home() {
   const [users, setUsers] = useState([]);
@@ -10,8 +10,8 @@ function Home() {
     const usersFromSpi = await api.get("/usuarios");
 
     setUsers(usersFromSpi.data);
-    console.log(users);
   }
+
   useEffect(() => {
     getUsers();
   });
